@@ -47,12 +47,39 @@ button {
 <div class="container">
 <h1>AMMORA</h1>
 <p>Decentralized Exchange</p>
-<button>Connect Wallet</button>
+<button id="connectWalletBtn">Connect Wallet</button>
 <h2>Swap Tokens</h2>
 <input placeholder="You pay - ETH">
 <input placeholder="You receive - USDC">
 <button>Swap</button>
 <p>Powered by Ammora SDK</p>
+  
+<script>
+const btn = document.getElementById("connectWalletBtn");
+
+if (btn) {
+  btn.addEventListener("click", async function () {
+    if (!window.ethereum) {
+      alert("MetaMask tidak terdeteksi. Buka melalui Lemur.");
+      return;
+    }
+
+    try {
+      const accounts = await window.ethereum.request({
+        method: "eth_requestAccounts"
+      });
+
+      alert("Wallet berhasil terhubung: " + accounts[0]);
+
+      btn.textContent = accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
+
+    } catch (error) {
+      alert("Koneksi gagal: " + error.message);
+    }
+  });
+}
+</script>
+  
 </div>
 </body>
 </html>
