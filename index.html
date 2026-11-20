@@ -1,12 +1,58 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ammora Exchange</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ammora Exchange</title>
+<style>
+body {
+  background: #080d20;
+  color: white;
+  font-family: Arial;
+  padding: 20px;
+}
+.container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #151d38;
+  border-radius: 20px;
+}
+h1 { color: #8655ff; }
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: #080d20;
+  color: white;
+  border: 1px solid #555;
+}
+button {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0;
+  border: 0;
+  border-radius: 12px;
+  background: #7548ff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+</style>
 </head>
 <body>
-  <h1>Ammora Exchange Prototype</h1>
-  <p>Welcome to Ammora Exchange.</p>
+<div class="container">
+<h1>AMMORA</h1>
+<p>Decentralized Exchange</p>
+<button>Connect Wallet</button>
+<h2>Swap Tokens</h2>
+<input placeholder="You pay - ETH">
+<input placeholder="You receive - USDC">
+<button>Swap</button>
+<p>Powered by Ammora SDK</p>
+</div>
 </body>
 </html>
